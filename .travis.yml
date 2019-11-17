@@ -5,7 +5,7 @@ cache:
     - ./node_modules
 
 before_script:
-  - npm install --prefix ./
+  - npm install 
 
 script:
   - npm run test
