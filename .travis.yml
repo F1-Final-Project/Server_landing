@@ -1,11 +1,4 @@
-language: node_js
-
 dist: trusty
-
-#deploy:
-#  provider: heroku
-#  api_key:
-#    secure: "YOUR ENCRYPTED API KEY"
 
 cache:
   directories:
