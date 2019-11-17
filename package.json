@@ -1,0 +1,33 @@
+{
+  "name": "server_landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/foo.js",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/fe9_finale/server_landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/fe9_finale/server_landing/issues"
+  },
+  "homepage": "https://gitlab.com/fe9_finale/server_landing#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "db-schemas": "git+https://gitlab.com/fe9_finale/db_services",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-react-views": "^0.11.0",
+    "mongoose": "^5.7.11",
+    "nodemon": "^1.19.4",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "tap": "^14.9.2"
+  }
+}

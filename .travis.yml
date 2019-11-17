@@ -1,0 +1,18 @@
+language: node_js
+
+dist: trusty
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "YOUR ENCRYPTED API KEY"
+
+cache:
+  directories:
+    - ./node_modules
+
+before_script:
+  - npm install --prefix ./
+
+script:
+  - npm run test
