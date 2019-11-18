@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/fe9_finale/server_landing.git"
+    "url": "git+https://github.com/imovie23/Server_landing.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/fe9_finale/server_landing/issues"
+    "url": "https://github.com/imovie23/Server_landing/issues"
   },
-  "homepage": "https://gitlab.com/fe9_finale/server_landing#readme",
+  "homepage": "https://github.com/imovie23/Server_landing#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "db-schemas": "git+https://gitlab.com/fe9_finale/db_services",
