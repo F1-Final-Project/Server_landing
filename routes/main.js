@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const Category = require('db-schemas/tree/dev/lib/models/category');
-const Dish = require('db-schemas/tree/dev/lib/models/dish');
+const Category = require('db-schemas/lib/models/category');
+const Dish = require('db-schemas/lib/models/dish');
 
 router.route('/')
     .get(async function (req, res) {
