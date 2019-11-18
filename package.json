@@ -19,7 +19,7 @@
   "homepage": "https://github.com/imovie23/Server_landing#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "db-schemas": "git+https://gitlab.com/fe9_finale/db_services",
+    "db-schemas": "git+https://github.com/imovie23/DB_Services",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-react-views": "^0.11.0",
