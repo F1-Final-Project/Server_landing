@@ -1,12 +1,14 @@
 const router = require('express').Router();
 const Category = require('db-schemas/lib/models/category');
 const Dish = require('db-schemas/lib/models/dish');
+const News = require('db-schemas/lib/models/news');
 
 router.route('/')
     .get(async function (req, res) {
 
         try {
             const categories = await Category.find({});
+            const news = await News.find({}).sort({date: -1});
             const dishesByCategory = categories.map(async function(item)
             {
                 const dishes = await Dish.find({ category: item._id });
@@ -14,7 +16,8 @@ router.route('/')
             });
             const dishes=await Promise.all(dishesByCategory);
             res.render('index', {
-                menu: dishes
+                menu: dishes,
+                news: news
             })
         }
         catch (err) {
