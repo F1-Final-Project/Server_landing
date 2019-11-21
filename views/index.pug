@@ -1,0 +1,71 @@
+doctype html
+html
+    head
+        title='MEATS'
+        require('bootstrap')
+        link(rel="stylesheet", href="/css/style.css")
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+    body
+        div(class="container")
+            div(class="header")
+                div(class="header-logo") MEAT && Wine
+                    span .CO
+                ul(class="menu")
+                    each item in menu
+                        li=item.category
+                button(class="reserve") Reserve A Table
+            div(class="content")
+                .bd-example
+                    #carouselExampleCaptions.carousel.slide(data-ride='carousel')
+                        ol.carousel-indicators
+                            li.active(data-target='#carouselExampleCaptions' data-slide-to='0')
+                            li(data-target='#carouselExampleCaptions' data-slide-to='1')
+                            li(data-target='#carouselExampleCaptions' data-slide-to='2')
+                        .carousel-inner
+                            .carousel-item.active
+                                img.d-block.w-100(src='/img/steak.jpg')
+                                .carousel-caption.d-none.d-md-block
+                                    h5.title-carusel Meat
+                                    p.text-carusel Our chefs cook the best steaks in town!
+                            .carousel-item
+                                img.d-block.w-100(src='/img/of-wine.jpg')
+                                .carousel-caption.d-none.d-md-block
+                                    h5.title-carusel Wine
+                                    p.text-carusel Italian wines from our cellars.
+                            .carousel-item
+                                img.d-block.w-100(src='/img/chicken.jpg')
+                                .carousel-caption.d-none.d-md-block
+                                    h5.title-carusel Salad
+                                    p.text-carusel Only fresh vegetables. Try our signature salads.
+                        a.carousel-control-prev(href='#carouselExampleCaptions' role='button' data-slide='prev')
+                            span.carousel-control-prev-icon(aria-hidden='true')
+                            span.sr-only Previous
+                        a.carousel-control-next(href='#carouselExampleCaptions' role='button' data-slide='next')
+                            span.carousel-control-next-icon(aria-hidden='true')
+                            span.sr-only Next
+                div(id="populyar")
+                    div.populyar-title The Most Populyar
+                    div.populyar-content
+                        div.populyar-item
+                            img.populyar-img(src="/img/vegetable-salad.jpg")
+                            .populyar-text Caesar
+                            .price $20.0
+                        div.populyar-item
+                            img.populyar-img(src="/img/meal-served.jpg")
+                            .populyar-text Fried rabbit
+                            .price $43.5
+                        div.populyar-item
+                            img.populyar-img(src="/img/against-black.jpg")
+                            .populyar-text Cabernet Sauvignon
+                            .price $24.0
+                div(id="salad")
+                    div.position-title Salad
+                div(id="meat") 
+                    div.position-title Meat
+                div(id="alcohol")
+                    div.position-title Alcohol
+        
+
+        script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
