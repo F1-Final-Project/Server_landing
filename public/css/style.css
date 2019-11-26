@@ -155,3 +155,33 @@ body {
     z-index: 2;
     margin-bottom: 40px;
 }
+.footer {
+    margin-top: 50px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    background: #0D1E2D;
+    padding: 20px;
+}
+.footer-text {
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer-text div {
+    padding: 10px
+}
+.footer-title {
+    font-size: 24px;
+}
+.sub-footer {
+    height: 45px;
+    display: flex;
+    background: black;
+    justify-content: space-around;
+    align-items: center;
+    color: #FFA326;
+    font-size: 12px;
+}
