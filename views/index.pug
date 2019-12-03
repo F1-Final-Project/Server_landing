@@ -6,14 +6,16 @@ html
         link(rel="stylesheet", href="/css/style.css")
         link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
     body
+        div.modal
         div(class="container")
             div(class="header")
                 div(class="header-logo") MEAT && Wine
                     span .CO
                 ul(class="menu")
                     each item in menu
-                        li=item.category
-                button(class="reserve") Забронировать стол
+                        li
+                            a(href="#" + item.category)=item.category
+                button(class="reserve") Забронировать стол 
             div(class="content")
                 .bd-example
                     #carouselExampleCaptions.carousel.slide(data-ride='carousel')
@@ -64,33 +66,33 @@ html
                             img.populyar-img(src="/img/against-black.jpg")
                             .populyar-text Кагор
                             .price $24.0
-                div.block-menu(id="salad")
+                div.block-menu(id=menu[0].category)
                     div.modal-menu
-                    div.position-title Салаты:
+                    div.position-title=menu[0].category + ':'
                     each dish in menu[0].dishes
                         div.restaurant-menu
                             h3.dish-title=dish.title
                             h3.dish-price=dish.price + ' грн /'
                             h3.dish-weight=dish.weight + 'гр'
-                div.block-menu(id="meat") 
+                div.block-menu(id=menu[1].category) 
                     div.modal-menu
-                    div.position-title Мясо:
+                    div.position-title=menu[1].category + ':'
                     each dish in menu[1].dishes
                         div.restaurant-menu
                             h3.dish-title=dish.title
                             h3.dish-price=dish.price + ' грн /'
                             h3.dish-weight=dish.weight + 'гр'
-                div.block-menu(id="alcohol")
+                div.block-menu(id=menu[2].category)
                     div.modal-menu
-                    div.position-title Алкоголь:
+                    div.position-title=menu[2].category + ':'
                     each dish in menu[2].dishes
                         div.restaurant-menu
                             h3.dish-title=dish.title
                             h3.dish-price=dish.price + ' грн /'
                             h3.dish-weight=dish.weight + 'гр'
-                div.block-menu(id="desert")
+                div.block-menu(id=menu[3].category)
                     div.modal-menu
-                    div.position-title Десерты:
+                    div.position-title=menu[3].category + ':'
                     each dish in menu[3].dishes
                         div.restaurant-menu
                             h3.dish-title=dish.title
@@ -114,4 +116,8 @@ html
         script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
         script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous')
         script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
-        console.log('menu')
+        //- script(src='../node_modules/jquery/dist/jquery.js')
+        script(src="https://code.jquery.com/jquery-3.4.1.min.js")
+        script(src="/static/common.js")
+        
+            

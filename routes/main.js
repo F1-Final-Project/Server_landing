@@ -14,12 +14,11 @@ router.route('/')
                 return {
                     "category": item.title, 
                     "description": item.description,
-                    // "menuItem": item.menu,
                     "dishes": dishes,
                 }
             });
             const dishes=await Promise.all(dishesByCategory);
-            console.log('dishes[0].dishes===> ', dishes[0].dishes[0]);
+            // console.log('dishes[0].dishes===> ', dishes[3].dishes);
             res.render('index', {
                 menu: dishes,
                 news: news
