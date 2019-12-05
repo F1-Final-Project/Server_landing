@@ -7,6 +7,13 @@ html
         link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
     body
         div.modal
+        .modal-overlay
+             form#contactform
+                .form-wrapper
+                    input#name(name='name' placeholder='Ваше имя и фамилия' required='' tabindex='1' type='text')
+                    input#phone(name='phone' placeholder='+380' required='' tabindex='2' type='text')
+                    textarea#comment(name='comment' tabindex='4' placeholder='Ваши пожелания')
+                input#submit(name='submit' tabindex='5' value='Отправить' type='submit')
         div(class="container")
             div(class="header")
                 div(class="header-logo") MEAT && Wine
