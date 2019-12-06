@@ -8,7 +8,7 @@ html
     body
         div.modal
         .modal-overlay
-             form#contactform
+             form#contactform(method="post" action="/")
                 .form-wrapper
                     input#name(name='name' placeholder='Ваше имя и фамилия' required='' tabindex='1' type='text')
                     input#phone(name='phone' placeholder='+380' required='' tabindex='2' type='text')

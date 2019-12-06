@@ -46,6 +46,13 @@ mongoose.connect(config.DB_URI, {useNewUrlParser: true, useUnifiedTopology: true
                 console.log('Listening on port ' + config.PORT);
             }
         });
+        var urlencodedParser = bodyParser.urlencoded({ extended: false })
+        app.post('/', urlencodedParser, function(req, res) {
+            if(!req.body) return res.sendStatus(400)
+            console.log(req.body);
+            // res.redirect('/');
+            res.render('success');
+        })
     }).catch(err => {
     console.log('Error --> ', err);
 });
