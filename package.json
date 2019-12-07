@@ -26,6 +26,7 @@
     "express-react-views": "^0.11.0",
     "jquery": "^3.4.1",
     "mongoose": "^5.7.11",
+    "nodemailer": "^6.4.0",
     "nodemon": "^1.19.4",
     "pug": "^2.0.4"
   },

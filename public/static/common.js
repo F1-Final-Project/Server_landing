@@ -2,6 +2,7 @@ const modal = document.querySelector('.modal');
 const reserve = document.querySelector('.reserve');
 const modalOverlay = document.querySelector('.modal-overlay');
 
+
 reserve.addEventListener('click', ()=> {
     modal.classList.add('show');
     modalOverlay.classList.add('show');
