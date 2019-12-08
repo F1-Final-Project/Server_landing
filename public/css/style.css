@@ -73,9 +73,13 @@ body {
     font-size: 30px;
     text-shadow: 1px 1px 2px black, 0 0 1em red;
 }
+.populyar-item {
+    margin-bottom: 10px;
+}
 .populyar-content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .populyar-title {
     text-align: center;
@@ -293,4 +297,55 @@ body {
     font-size: 15px;
     transition: .3s;
     margin: 20px;
+}
+
+/* Adaptation */
+
+@media screen and (max-width: 992px) { 
+    .menu {
+        display: none;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 100%;
+    } 
+    .populyar-content {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 505px) {
+    .header {
+        padding: 0 15px;
+    }
+    .header-logo {
+        width: 77px;
+        font-size: 13px;
+    }
+    .dish-title {
+        width: auto;
+        font-size: 18px;
+        max-width: 148px;
+    }
+    .populyar-title {
+        font-size: 30px;
+    }
+    .restaurant-menu {
+        margin-left: 10px;
+    }
+    .position-title {
+        margin-left: 10px;
+        font-size: 40px;
+    }
+    .footer-map {
+        display: none;
+    }
+    .sub-footer {
+        flex-direction: column;
+    }
 }
