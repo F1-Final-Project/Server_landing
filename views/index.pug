@@ -12,17 +12,16 @@ html
                 .form-wrapper
                     input#name(name='name' placeholder='Ваше имя и фамилия' required='' tabindex='1' type='text')
                     input#phone(name='phone' placeholder='+380' required='' tabindex='2' type='text')
-                    textarea#comment(name='comment' tabindex='4' placeholder='Ваши пожелания')
+                    input#comment(name='comment' type="number" placeholder='Номер стола')
                 input#submit(name='submit' tabindex='5' value='Отправить' type='submit')
         div(class="container")
             div(class="header")
-                div(class="header-logo") MEAT && Wine
-                    span .CO
+                img(class="header-logo" src="/img/logo.jpg") 
                 ul(class="menu")
                     each item in menu
                         li
                             a(href="#" + item.category)=item.category
-                button(class="reserve") Забронировать стол 
+                button(class="reserve") Забронировать стол
             div(class="content")
                 .bd-example
                     #carouselExampleCaptions.carousel.slide(data-ride='carousel')
@@ -59,7 +58,7 @@ html
                             span.carousel-control-next-icon(aria-hidden='true')
                             span.sr-only Next
                 div(id="populyar")
-                    div.populyar-title Популярные  блюда
+                    div.populyar-title Популярные блюда
                     div.populyar-content
                         div.populyar-item
                             img.populyar-img(src="/img/vegetable-salad.jpg")

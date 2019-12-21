@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/imovie23/Server_landing#readme",
   "dependencies": {
+    "axios": "^0.19.0",
     "body-parser": "^1.19.0",
     "db-schemas": "git+https://github.com/imovie23/DB_Services",
     "db_services": "git+https://github.com/imovie23/DB_Services.git",
